@@ -12,6 +12,7 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef(null);
   const scrollerRef = React.useRef(null);
+  const [clickedCardIndex, setClickedCardIndex] = useState(null);
 
   useEffect(() => {
     addAnimation();
@@ -64,6 +65,10 @@ export const InfiniteMovingCards = ({
     }
   };
 
+  const handleCardClick = (index) => {
+    setClickedCardIndex(index === clickedCardIndex ? null : index);
+  };
+
   return (
     <div
       ref={containerRef}
@@ -82,15 +87,31 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[100px] flex-shrink-0 bg-gray-50 rounded-lg border border-gray-200 p-3 flex flex-col items-center"
+            className={cn(
+              "relative w-[100px] flex-shrink-0 bg-gray-50 rounded-lg border border-gray-200 p-3 flex flex-col items-center",
+              "transition-all duration-300 ease-in-out",
+              "hover:shadow-lg hover:scale-110 hover:bg-gray-100 hover:border-blue-500",
+              clickedCardIndex === idx &&
+                "ring-2 ring-blue-500 scale-110 shadow-lg bg-blue-50"
+            )}
             key={idx}
+            onClick={() => handleCardClick(idx)}
           >
             <img
               src={item.img}
               alt={item.title}
-              className="h-16 w-16 object-contain"
+              className={cn(
+                "h-16 w-16 object-contain",
+                "transition-transform duration-300",
+                clickedCardIndex === idx && "scale-110"
+              )}
             />
-            <span className="mt-1 text-xs font-medium text-gray-700 text-center">
+            <span
+              className={cn(
+                "mt-1 text-xs font-medium text-center",
+                clickedCardIndex === idx ? "text-blue-700" : "text-gray-700"
+              )}
+            >
               {item.title.trim()}
             </span>
           </li>

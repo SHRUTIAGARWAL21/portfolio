@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Define the structure for your project data
 type Project = {
@@ -60,12 +60,8 @@ export const ProjectShowcase: React.FC = () => {
     setActive((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
-  const isActive = (index: number): boolean => {
-    return index === active;
-  };
-
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 overflow-hidden">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         {/* Left side - Project Images with stacked effect */}
         <div>
@@ -119,23 +115,21 @@ export const ProjectShowcase: React.FC = () => {
         </div>
 
         {/* Right side - Project Details */}
-        <div className="flex flex-col justify-between py-4">
-          <div>
-            <h3 className="text-3xl font-bold text-gray-700  mb-6">
+        <div className="flex flex-col justify-between relative">
+          <div className="h-64 overflow-y-auto pr-2">
+            <h3 className="text-3xl font-bold text-gray-700 mb-4">
               {projects[active].title}
             </h3>
 
-            {/* Description text */}
-            <p className="text-gray-600 text-lg mb-8">
+            <p className="text-gray-600 text-lg mb-4">
               {projects[active].description}
             </p>
 
-            {/* Technology icons */}
-            <div className="flex mt-8">
+            <div className="flex flex-wrap">
               {projects[active].technologies.map((src, i) => (
                 <div
                   key={i}
-                  className="border p-2 rounded-full -ml-2 first:ml-0 bg-gray-100"
+                  className="border p-2 rounded-full -ml-2 first:ml-0 bg-gray-100 mb-2"
                 >
                   <img src={src} alt="" className="h-6 w-6 object-contain" />
                 </div>
@@ -144,7 +138,7 @@ export const ProjectShowcase: React.FC = () => {
           </div>
 
           {/* Navigation buttons */}
-          <div className="flex gap-4 pt-12 md:pt-6">
+          <div className="flex gap-4 mt-4">
             <button
               onClick={handlePrev}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"

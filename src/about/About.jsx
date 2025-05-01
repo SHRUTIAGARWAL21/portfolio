@@ -13,7 +13,7 @@ export default function About() {
         <span className="text-md font-mono text-purple-900 ">About</span>
         <hr className="border-t border-gray-200 max-w-10xl mb-6" />
         <hr className="border-t border-gray-200 max-w-10xl" />
-        <h2 className="text-4xl sm:text-5xl font-semibold text-gray-800 leading-tight">
+        <h2 className="md:text-4xl sm:text-3xl font-semibold text-gray-800 leading-tight">
           Explore more about my skills,
           <br />
           and what drives me.
@@ -54,18 +54,21 @@ export default function About() {
           </div>
 
           {/* Toolbox (tall, horizontal scroll) */}
-          <div className="bg-white p-4 rounded-lg border border-gray-200 h-56 flex flex-col">
+          <div className="bg-white p-4 rounded-lg border border-gray-200 h-64 flex flex-col">
             <h2 className="text-xl font-bold text-gray-800 mb-2 text-center">
-              Toolbox
+              My Toolbox
             </h2>
             <p className="text-gray-600 text-sm text-center mb-4">
-              Check out my favorite tools:
+              Check out my favorite tools
             </p>
-            <InfiniteMovingCards
-              items={tools}
-              speed="normal"
-              direction="right"
-            />
+
+            <div className="flex-1 -mb-12">
+              <InfiniteMovingCards
+                items={tools}
+                speed="normal"
+                direction="left"
+              />
+            </div>
           </div>
         </div>
 
@@ -89,8 +92,8 @@ export default function About() {
           </div>
 
           {/* My approach (short) */}
-          <div className="bg-white p-4 rounded-lg border border-gray-200 h-40">
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">
+          <div className="bg-white p-4 rounded-lg border border-gray-200 h-48">
+            <h2 className="text-xl font-bold text-gray-800 mb-2 sm:mb-10 text-center">
               My approach
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
