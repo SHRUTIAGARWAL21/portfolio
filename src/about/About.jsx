@@ -13,7 +13,7 @@ export default function About() {
         <span className="text-md font-mono text-purple-900 ">About</span>
         <hr className="border-t border-gray-200 max-w-10xl mb-6" />
         <hr className="border-t border-gray-200 max-w-10xl" />
-        <h2 className="md:text-4xl sm:text-3xl font-semibold text-gray-800 leading-tight">
+        <h2 className="md:text-4xl sm:text-5xl font-semibold text-gray-800 leading-tight">
           Explore more about my skills,
           <br />
           and what drives me.

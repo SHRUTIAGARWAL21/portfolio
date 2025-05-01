@@ -5,10 +5,10 @@ export default function Contact() {
     <div id="contact" className="pt-4">
       <hr className="border-t border-gray-200 max-w-full" />
 
-      <div className="mx-auto text-center px-6 md:px-12">
+      <div className="mx-auto text-center ">
         <span className="text-md font-mono text-purple-900">Contact</span>
-        <hr className="border-t border-gray-200 max-w-full mb-6" />
-        <hr className="border-t border-gray-200 max-w-full" />
+        <hr className="border-t border-gray-200 w-full mb-6" />
+        <hr className="border-t border-gray-200 w-full" />
         <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 leading-tight">
           Ready to move forward with your project?
         </h2>

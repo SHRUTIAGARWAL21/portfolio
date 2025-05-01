@@ -13,9 +13,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center sm:px-2 md:px-16 py-3 border-b">
+    <nav className="flex justify-between items-center sm:px-2  py-3 border-b">
       <div className="flex justify-between items-center w-full md:w-auto">
-        <img src="logo.png" className="h-11 w-11 sm:mx-0 xl:ml-16" alt="Logo" />
+        <img src="logo.png" className="h-11 w-11 sm:mx-0 xl:ml-2" alt="Logo" />
 
         <button
           className="md:hidden ml-auto"
@@ -57,7 +57,7 @@ export default function Navbar() {
         </a>
       </div>
 
-      <div className="hidden md:flex items-center space-x-2 md:mx-0 xl:mr-16">
+      <div className="hidden md:flex items-center space-x-2 md:mx-0 xl:mr-2">
         <a
           href="https://leetcode.com/u/ShrutiAgarwal_21/"
           target="_blank"

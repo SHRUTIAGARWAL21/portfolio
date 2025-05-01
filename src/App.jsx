@@ -7,36 +7,29 @@ import Footer from "./Footer";
 
 export default function App() {
   return (
-    <>
+    <div className="md:mx-0 xl:mx-28 border-l border-r">
       <Navbar />
 
-      {/* OUTER MARGIN: increased for more space from the edges */}
-      <div className="">
-        {/* Main content wrapper with stripes */}
-        <div className="relative flex">
-          {/* Left Stripe */}
-          <div
-            className="hidden md:block w-8 md:mx-0 xl:ml-28
-             bg-[repeating-linear-gradient(135deg,#e5e7eb_0px,#e5e7eb_1px,transparent_1px,transparent_3px)]"
-          />
+      <div className="relative flex">
+        <div
+          className="hidden md:block w-8 
+               bg-[repeating-linear-gradient(135deg,#e5e7eb_0px,#e5e7eb_1px,transparent_1px,transparent_3px)]"
+        />
 
-          {/* Main content section */}
-          <div className="flex-1">
-            <Intro />
-            <About />
-            <Project />
-            <Contact />
-          </div>
-
-          {/* Right Stripe */}
-          <div
-            className="hidden md:block w-8  md:mx-0 xl:mr-28
-             bg-[repeating-linear-gradient(135deg,#e5e7eb_0px,#e5e7eb_1px,transparent_1px,transparent_3px)]"
-          />
+        <div className="flex-1 border-l border-r border-gray-200">
+          <Intro />
+          <About />
+          <Project />
+          <Contact />
         </div>
+
+        <div
+          className="hidden md:block w-8 
+               bg-[repeating-linear-gradient(135deg,#e5e7eb_0px,#e5e7eb_1px,transparent_1px,transparent_3px)]"
+        />
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
