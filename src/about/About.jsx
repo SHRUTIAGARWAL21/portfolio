@@ -86,7 +86,7 @@ export default function About() {
               <InfiniteMovingCards
                 items={techStack}
                 speed="normal"
-                direction="left"
+                direction="right"
               />
             </div>
           </div>
