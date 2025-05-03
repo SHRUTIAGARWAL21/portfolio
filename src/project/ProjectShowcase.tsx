@@ -115,17 +115,18 @@ export const ProjectShowcase: React.FC = () => {
         </div>
 
         {/* Right side - Project Details */}
-        <div className="flex flex-col justify-between relative">
-          <div className="h-64 overflow-y-auto pr-2">
-            <h3 className="text-3xl font-bold text-gray-700 mb-4">
+        <div className="flex flex-col justify-between relative h-[300px] md:h-auto">
+          {/* Content with no scrollbar, overflow hidden */}
+          <div className="overflow-hidden pr-2">
+            <h3 className="text-3xl font-bold text-gray-700 mb-4 line-clamp-2">
               {projects[active].title}
             </h3>
 
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-gray-600 text-lg mb-4 line-clamp-4">
               {projects[active].description}
             </p>
 
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap max-h-24 overflow-hidden">
               {projects[active].technologies.map((src, i) => (
                 <div
                   key={i}
@@ -137,7 +138,7 @@ export const ProjectShowcase: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation buttons */}
+          {/* Navigation buttons pinned to bottom */}
           <div className="flex gap-4 mt-4">
             <button
               onClick={handlePrev}

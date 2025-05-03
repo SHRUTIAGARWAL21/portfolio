@@ -25,7 +25,7 @@ export default function About() {
       {/* Two-column grid */}
       {/* <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-8 gap-4 mt-4 px-6 sm:px-12 mb-40"> */}
 
-      <div className="grid grid-cols-1 lg:grid-cols-8 gap-4 mt-4 mb-36">
+      <div className="grid grid-cols-1 lg:grid-cols-8 gap-4 mt-4 mb-20">
         {/* ─── First column (3/8) ─── */}
         <div className="sm:col-span-1 md:col-span-3 space-y-4">
           {/* Learn more about me (short) */}

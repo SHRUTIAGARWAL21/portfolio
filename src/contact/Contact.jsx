@@ -17,10 +17,10 @@ export default function Contact() {
           Let’s connect and make it happen
         </h2>
       </div>
-      <hr className="border-t border-gray-200 pb-10" />
+      <hr className="border-t border-gray-200 pb-14" />
 
-      <div className="flex justify-center pt-4 pb-10">
-        <a href="mailto:your.email@example.com">
+      <div className="flex justify-center pb-14">
+        <a href="shrutiagarwal4221@gmail.com">
           <Button>
             Get in touch
             <div className="pl-2">

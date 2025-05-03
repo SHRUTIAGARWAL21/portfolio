@@ -14,7 +14,7 @@ export default function Project() {
           <h2 className="text-gray-600">I've worked on</h2>
         </h2>
       </div>
-      <hr className="border-t border-gray-200 pb-10 " />
+      <hr className="border-t border-gray-200  " />
       <div className="">
         <ProjectShowcase />
       </div>

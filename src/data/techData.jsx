@@ -6,7 +6,7 @@ export const techStack = [
   { title: "CSS", img: "https://cdn.worldvectorlogo.com/logos/css-3.svg" },
   {
     title: "Tailwind CSS",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcoZsMBFkU9ArhUL_HlgeESChICNA1cZcIZg&s",
+    img: "tailwindlogo.png",
   },
   {
     title: "JavaScript",
@@ -14,19 +14,19 @@ export const techStack = [
   },
   {
     title: "ReactJS",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s",
+    img: "reactlogo.png",
   },
   {
     title: "NodeJS",
-    img: "https://e7.pngegg.com/pngimages/306/37/png-clipart-node-js-logo-node-js-javascript-web-application-express-js-computer-software-others-miscellaneous-text.png",
+    img: "nodejslogo.png",
   },
   {
     title: "Express",
-    img: "https://miro.medium.com/v2/resize:fit:1400/1*XP-mZOrIqX7OsFInN2ngRQ.png",
+    img: "expressjslogo.png",
   },
   {
     title: "MongoDB",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmT8HtltidnDUJvGcRYzg8B9h8zM-2O-FZw&s",
+    img: "mongodblogo.png",
   },
 ];
 
@@ -36,16 +36,16 @@ export const tools = [
     img: "https://static.vecteezy.com/system/resources/previews/048/332/147/non_2x/c-programming-icon-free-png.png",
   },
   {
-    title: "Java",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpSVEI_vXUSQ-owl_17jMGPd4e09XKG39Dyg&s",
+    title: "C++",
+    img: "c++logo.png",
   },
   {
     title: "Python",
-    img: "https://www.citypng.com/public/uploads/preview/hd-python-logo-symbol-transparent-png-735811696257415dbkifcuokn.png",
+    img: "pythonlogo.png",
   },
   {
     title: "VS Code",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJNnjZv36ijogi3aM_xcSMy26_QeOWrVmJQ&s",
+    img: "vslogo.png",
   },
   {
     title: "GitHub",
