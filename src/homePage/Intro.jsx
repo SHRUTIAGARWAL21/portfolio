@@ -2,10 +2,7 @@ import { Button } from "../components/ui/moving-border";
 
 export default function Intro() {
   return (
-    <div
-      id="intro"
-      className="flex flex-col items-center text-center px-4 md:px-0"
-    >
+    <div id="intro" className="flex flex-col items-center text-center  md:px-0">
       {/* Profile Photo */}
       <div className="py-10">
         <div className="border rounded-full p-2 w-36 h-36 flex items-center justify-center">
