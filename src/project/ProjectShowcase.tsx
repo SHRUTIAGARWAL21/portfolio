@@ -65,11 +65,11 @@ export const ProjectShowcase: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 overflow-hidden">
-      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+    <div className="mx-auto max-w-sm px-4 py-10 sm:py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 overflow-hidden">
+      <div className="relative grid grid-cols-1 gap-8 sm:gap-20 md:grid-cols-2">
         {/* Left side - Project Images with stacked effect */}
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-60 sm:h-80 w-full">
             {projects.map((project, index) => {
               const offset =
                 (index - active + projects.length) % projects.length;

@@ -17,7 +17,7 @@ export default function App() {
                bg-[repeating-linear-gradient(135deg,#e5e7eb_0px,#e5e7eb_1px,transparent_1px,transparent_3px)]"
           />
 
-          <div className="flex-1 border-l border-r border-gray-200">
+          <div className="flex-1 border-l border-r border-gray-200 mt-20">
             <Intro />
             <About />
             <Project />

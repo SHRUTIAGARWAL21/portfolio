@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <nav
       id="home"
-      className="flex justify-center border-b py-3 sm:px-2 relative z-30 bg-white"
+      className="flex justify-center border-b py-3  sm:px-2 fixed top-0 left-0 right-0 z-50 bg-white"
     >
       <div className="flex justify-between items-center w-full max-w-7xl px-4">
         <div className="flex justify-between items-center w-full md:w-auto">
