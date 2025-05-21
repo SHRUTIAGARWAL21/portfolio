@@ -26,7 +26,10 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <nav className="flex justify-center border-b py-3 sm:px-2 relative z-30 bg-white">
+    <nav
+      id="home"
+      className="flex justify-center border-b py-3 sm:px-2 relative z-30 bg-white"
+    >
       <div className="flex justify-between items-center w-full max-w-7xl px-4">
         <div className="flex justify-between items-center w-full md:w-auto">
           <img src="logo.png" className="h-11 w-11" alt="Logo" />
@@ -123,17 +126,33 @@ export default function Navbar() {
             </div>
 
             <nav className="flex flex-col space-y-6 text-lg">
-              <a href="#home" className="text-gray-700 font-semibold">
+              <a
+                href="#home"
+                className="text-gray-700 font-semibold"
+                onClick={() => setMenuOpen(false)}
+              >
                 Home
               </a>
-              <a href="#about" className="text-gray-500 hover:text-gray-700">
+              <a
+                href="#about"
+                className="text-gray-500 hover:text-gray-700"
+                onClick={() => setMenuOpen(false)}
+              >
                 About
               </a>
-              <a href="#blog" className="text-gray-500 hover:text-gray-700">
-                Blog
-              </a>
-              <a href="#projects" className="text-gray-500 hover:text-gray-700">
+              <a
+                href="#projects"
+                className="text-gray-500 hover:text-gray-700"
+                onClick={() => setMenuOpen(false)}
+              >
                 Projects
+              </a>
+              <a
+                href="#contact"
+                className="text-gray-500 hover:text-gray-700"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
               </a>
             </nav>
           </div>

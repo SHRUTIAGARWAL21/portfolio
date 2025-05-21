@@ -3,12 +3,13 @@
 import React, { useState } from "react";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-
+import { IoIosLink } from "react-icons/io";
 // Define the structure for your project data
 type Project = {
   title: string;
   description: string;
   image: string;
+  link: string;
   technologies: string[];
 };
 
@@ -19,6 +20,7 @@ const projects: Project[] = [
     description:
       "A blog app that lets users register, login, create, edit posts and read blogs posted by others.",
     image: "blog.jpg",
+    link: "https://blog-website-seven-gamma.vercel.app/",
     technologies: [
       "https://cdn.worldvectorlogo.com/logos/css-3.svg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s",
@@ -32,6 +34,7 @@ const projects: Project[] = [
     description:
       "A simple movie search app where users can find movies, see details like images and descriptions, add movies to their watchlist, and rate the ones they've watched.",
     image: "movieApp.jpg",
+    link: "https://movie-search-pink-nu.vercel.app/",
     technologies: [
       "https://cdn.worldvectorlogo.com/logos/css-3.svg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s",
@@ -42,6 +45,7 @@ const projects: Project[] = [
     description:
       "A flower shop page featuring a neat display of flowers in a simple and visually appealing design.",
     image: "flower.jpg",
+    link: "",
     technologies: [
       "https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png",
       "https://cdn.worldvectorlogo.com/logos/css-3.svg",
@@ -118,9 +122,22 @@ export const ProjectShowcase: React.FC = () => {
         <div className="flex flex-col justify-between relative h-[300px] md:h-auto">
           {/* Content with no scrollbar, overflow hidden */}
           <div className="overflow-hidden pr-2">
-            <h3 className="text-3xl font-bold text-gray-700 mb-4 line-clamp-2">
-              {projects[active].title}
-            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <h3 className="text-3xl font-bold text-gray-700 line-clamp-2">
+                {projects[active].title}
+              </h3>
+              {projects[active].link && (
+                <a
+                  href={projects[active].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-gray-700 transition-colors"
+                  title="Visit project"
+                >
+                  <IoIosLink className="w-5 h-5" />
+                </a>
+              )}
+            </div>
 
             <p className="text-gray-600 text-lg mb-4 line-clamp-4">
               {projects[active].description}
